@@ -1,0 +1,16 @@
+[ Automations ]
+  [] just 
+  [] git
+    [] parse php T-DOC and style.css to autoincrement version on git commit
+  [] Code Sniffer
+[] direnv
+
+
+
+[ Code Refactor ]
+
+[ Theme Development ]
+
+[] 
+=======DONE========
+ YYYYMMDD [x] Descrition
