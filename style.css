@@ -43,3 +43,12 @@ html{
 .site-header .brand-name .glazed{
     color: var(--theme-color-background-glazed);
 }
+
+section {
+    min-height:80vh;
+}
+
+.feature-item__icon{
+    width: 32px;
+    height:32px;
+}

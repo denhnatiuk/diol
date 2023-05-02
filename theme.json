@@ -1,23 +1,27 @@
 {
-    "version":2,
-    "settings":{
-        "layout": {
+  "version": 2,
+  "settings": {
+    "layout": {
       "contentSize": "840px",
       "wideSize": "1100px"
     },
-        "typography":{
-            "fontSizes":[
-                {
-                    "slug":"sm",
-                    "size":"1rem",
-                    "name":"small"
-                },
-                {
-                    "slug":"md",
-                    "size":"1.25rem",
-                    "name":"medium"
-                }
-            ]
+    "color": {
+      "duotone": [],
+      "customDuotone": false
+    },
+    "typography": {
+      "fontSizes": [
+        {
+          "slug": "sm",
+          "size": "1rem",
+          "name": "small"
+        },
+        {
+          "slug": "md",
+          "size": "1.25rem",
+          "name": "medium"
         }
+      ]
     }
+  }
 }
