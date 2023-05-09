@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "watch:sass": "rollup -c -w",
+    "build:sass": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,5 +13,11 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.2.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "rollup": "^3.21.3",
+    "rollup-plugin-postcss": "^4.0.2",
+    "sass": "^1.62.1"
   }
 }

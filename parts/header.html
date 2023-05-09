@@ -1,1 +1,71 @@
-<!-- wp:pattern {"slug":"Pb-Header"} /-->
+<!-- wp:group { "tagName":"div", "className":"hero-header", "layout":{"type":"constrained"}} -->
+<div class="wp-block-group hero-header">
+  <div class="primary-bar d-flex">
+    <div class="site-branding">
+      <div class="site-logo">
+        <!-- <img src="" alt="Diol Service LLC"> -->
+        <!-- wp:site-logo /-->
+      </div>
+      <h1 class="brand-title">
+        <a href="https://diol.org.ua" rel="home">
+          <!-- wp:site-title /-->
+          <span class="brand-form">LLC</span>
+        </a>
+      </h1>
+      <!-- wp:paragraph -->
+        <!-- wp:site-tagline /-->
+        <span class="site-description">b2b delivery service</span>
+      <!-- /wp:paragraph -->
+    </div>
+    <ul id="landingNav" class="main-navigation  navbar-expand-sm navbar-nav mr-auto d-flex flex-row flex-shrink-0  collapse navbar-collapse">
+      <!-- wp:navigation { "className":"landing-nav" } /-->
+        <!-- wp:navigation-link {"label":"Products", "url":"#products", "className":"nav-item" } /-->
+          <!-- wp:navigation-link {"label":"Features", "url":"#features"} /-->
+          <!-- wp:navigation-link {"label":"Переваги", "url":"#advantages"} /-->
+        <!-- wp:navigation-link {"label":"News", "url":"#news"} /-->
+        <!-- wp:navigation-link {"label":"Posts", "url":"#posts"} /-->
+        <!-- wp:navigation-link {"label":"Social", "url":"#social"} /-->
+        <!-- wp:navigation-link {"label":"Про Нас", "url":"#aboutus"} /-->
+        <!-- wp:navigation-link {"label":"Contacts", "url":"#contacts"} /-->
+      <!-- /wp:navigation -->
+
+        <li class="nav-item">
+          <a class="nav-link shine" href="#team">Команда</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link shine" href="#contacts">Контакти</a>
+        </li>
+        <li class="nav-item">
+          <div>
+            <?php 
+            get_template_part( 'template-parts/prefences/scrollToTop/scrollToTop', 'btn' ); 
+            get_template_part( 'template-parts/prefences/darklight/darklight', 'btn' ); 
+            ?>
+          </div>
+        </li>
+
+    </ul>
+    </nav>
+  </div>
+  <div>
+    <!-- wp:cover {
+      "url":"../assets/images/hero-header-banner.jpg"
+      ,"dimRatio":40
+      ,"focalPoint":{"x":0.5,"y":0.5}
+      ,"minHeight":650
+      ,"minHeightUnit":"px"
+      ,"isDark":false
+      ,"style":{
+          "spacing":{
+              "margin":{
+                  "top":"0"
+                  ,"bottom":"0"
+              }
+              ,"padding":{"top":"0","bottom":"0","right":"0","left":"0"}
+          }
+      }
+    } /-->
+    <!-- /wp:cover -->
+  </div>
+</div>
+<!-- /wp:group -->

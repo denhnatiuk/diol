@@ -1,39 +1,27 @@
 <?php
 /**
- * Title: Pb Hero Header
- * Slug: Pb-Header
- * Categories: Pb
+ * Title: Diol Header
+ * Slug: Diol/Header
+ * Categories: Diol, Header
  * Block Types: core/template-part/header
  */
 ?>
 
-<body <?php body_class( esc_html( wp_get_theme()->get( 'TextDomain' ) ) ); ?>>
-
-<?php
-	//wp_body_open();
-?>
-
-	<div id="page" class="site">
-		<a class="skip-link screen-reader-text" href="#primary">
-<?php esc_html_e('Skip to content', wp_get_theme()->get( 'TextDomain' ) ); ?>
-		</a>
-		<header id="masthead" class="site-header">
-			<div class="container">
+<div class="container site-header">
+<!-- wp:area { id: "header" } -->
 <?php
 if ( ! has_header_video() ) {
-	if ( ! has_header_image() ) {
-		//echo 'has no header image';
-		the_custom_header_markup();
-	} else {
-?>
-			<img 
-				src="<?php header_image(); ?>" 
-				height="<?php echo esc_html( get_custom_header()->height ); ?>" 
-				width="<?php echo esc_html( get_custom_header()->width ); ?>" 
-				alt="" 
-			/>
-<?php
-	}
+  if ( ! has_header_image() ) {
+    echo 'has no header image';
+    the_custom_header_markup();
+  } else {
+  ?><img 
+      src="<?php header_image(); ?>" 
+      height="<?php echo esc_html( get_custom_header()->height ); ?>" 
+      width="<?php echo esc_html( get_custom_header()->width ); ?>" 
+      alt="" 
+    /><?php
+  }
 } else {
 	if ( is_header_video_active() && ! empty(get_header_video_url() ) ) {
 		echo esc_url(
@@ -60,5 +48,5 @@ if ( ! has_header_video() ) {
 <?php
 	wp_get_nav_menus();
 ?>
-			</div>			
-		</header>
+<!-- /wp:area -->
+</div>

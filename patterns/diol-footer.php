@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Pb Footer
- * Slug: Pb-Footer
- * Categories: Pb
+ * Title: Diol Footer
+ * Slug: Diol/Footer
+ * Categories: Diol, Footer
  * Block Types: core/template-part/footer
  */
 ?>
