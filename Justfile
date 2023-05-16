@@ -31,6 +31,9 @@ test:
 lint:
   echo "Linting..."
 
+# watch sass
+watch:
+  npm run watch:sass
 
 install-dart:
   sudo apt-get update

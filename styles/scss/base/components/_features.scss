@@ -1,0 +1,142 @@
+#features {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+
+	.section-header{
+		text-align: right;
+		margin:3rem 0 0 0;
+		font-size: 3rem;
+		font-weight: 800;
+		// background: -webkit-linear-gradient(45deg, #09009f, #00ff95 80%);
+		// -webkit-background-clip: text;
+		// -webkit-text-fill-color: transparent;
+	}
+	.carousel{
+		margin:5rem 0;
+	}
+
+
+	.jumbotron {
+		box-shadow: 1px 1px 5px var(--theme-color-dark);
+		transition: all 0.5s ease-in-out;
+
+		h5 {
+			display: block;
+
+			&:after {
+				content: "";
+				display: block;
+				position: relative;
+				width: 0;
+				height: 3px;
+				background-color: var(--theme-color-main);
+
+			}
+		}
+
+		p {
+			text-align: justify;
+		}
+
+		&:hover {
+			h5:after {
+				width: 100%;
+				transition: all 0.5s ease-in-out;
+			}
+
+			p.text-muted {
+				color: var(--theme-color-text) !important;
+			}
+		}
+	}
+}
+
+.jumbotron {
+	padding: 2rem;
+}
+
+.jumbotron .icon {
+	box-sizing: border-box;
+	border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
+	padding: 0.5rem;
+}
+
+.jumbotron .icon svg {
+	width: 2rem;
+	height: 2rem;
+}
+
+.jumbotron-overflowed {
+	--layer-z-index: 1;
+	position: absolute;
+	top: 2rem;
+	left: 2rem;
+	z-index: var(--layer-z-index);
+	width: 60%;
+	padding: 0.25rem 1rem;
+	border: 1px solid var(--theme-color-main);
+	border-radius: 5px;
+}
+
+.jumbotron-overflowed .icon {
+	display: block;
+	float: right;
+}
+
+.jumbotron-overflowed h5 {
+	margin-top: 0;
+}
+
+.jumbotron-overflowed+.jumbotron-overflowed {
+	--layer-z-index: calc(var(--layer-z-index) + 1);
+	z-index: var(--layer-z-index);
+	top: 5rem;
+	left: 5rem;
+	padding: 0.25rem 1rem;
+}
+
+.jumbotron-overflowed+.jumbotron-overflowed h5 {
+	margin-top: 0;
+}
+
+.jumbotron-overflowed+.jumbotron-overflowed+.jumbotron-overflowed {
+	--layer-z-index: calc(var(--layer-z-index) + 1);
+	z-index: var(--layer-z-index);
+	top: 5rem;
+	left: 5rem;
+	padding: 0.25rem 1rem;
+}
+
+.jumbotron-overflowed+.jumbotron-overflowed+.jumbotron-overflowed h5 {
+	margin-top: 0;
+}
+
+.jumbotron-overflowed+.jumbotron-overflowed+.jumbotron-overflowed:hover {
+	z-index: 10;
+}
+
+.jumbotron-overflowed:hover {
+	z-index: 10;
+}
+
+.jumbotron.tab-pane {
+	min-width: 50vw;
+	max-width: 90vw;
+	min-height: 50vh;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.well {
+	min-width: 300px;
+	min-height: 300px;
+}
+
+
+.feature-item__icon {
+	width: 32px;
+	height: 32px;
+}

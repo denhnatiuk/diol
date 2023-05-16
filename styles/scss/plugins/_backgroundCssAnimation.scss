@@ -1,0 +1,55 @@
+div {
+  & .background-layer {
+    z-index: -1;
+    width: 200vw;
+    height: 200vw;
+    margin: -50vw 0 0 -50vw;
+    padding: 0;
+    border-radius: 50%;
+    -webkit-animation: rotating 20s linear infinite;
+    -moz-animation: rotating 20s linear infinite;
+    -ms-animation: rotating 20s linear infinite;
+    -o-animation: rotating 20s linear infinite;
+    animation: rotating 20s linear infinite;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border: 1px solid black;
+
+    //background-color: #a4508b;
+    // background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+    &:first-of-type {
+      background-image: linear-gradient(
+        45deg,
+        #a4508b 0%,
+        #a4508b 20%,
+        transparent 100%
+      );
+      // background-size: 25% 100%;
+    }
+    &:nth-of-type(2) {
+      background-image: linear-gradient(120deg, blue 0%, transparent);
+    }
+    &:nth-of-type(3) {
+      background-image: radial-gradient(
+        45% 25%,
+        rgba(255, 255, 255, 0.3) 0%,
+        transparent 55%,
+        transparent
+      );
+      background-position: 10% 85%;
+      animation: rotating 40s linear infinite;
+    }
+    &:last-of-type {
+      background-image: linear-gradient(
+        1650deg,
+        purple,
+        purple 30%,
+        transparent 75%
+      );
+    }
+  }
+}
+

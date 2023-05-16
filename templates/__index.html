@@ -1,0 +1,35 @@
+<!-- wp:template-part { "area":"header", "slug":"header", "tagName":"header", "className":"site-header" } /-->
+
+<!-- wp:group {"area":"main", "tagName":"main", "layout":{"type":"constrained"}} -->
+  <main class="wp-block-group main">
+    <!-- wp:template-part { "slug":"product", "tagName":"section", "className":"products" } /-->
+    <!-- wp:template-part { "slug":"news", "tagName":"section", "className":"news"} /-->
+    <!-- wp:template-part { "slug":"posts", "tagName":"section", "className":"posts"} /-->
+    <!-- wp:template-part { "slug":"social", "tagName":"section", "className":"social"} /-->
+    <!-- wp:template-part { "slug":"aboutus", "tagName":"section", "className":"aboutus"} /-->
+    <!-- wp:template-part { "slug":"contacts", "tagName":"section", "className":"contacts"} /-->
+
+  </main>
+<!-- /wp:group -->
+
+<!-- wp:template-part { "slug":"sidebar", "tagName":"sidebar"} /-->
+<!-- wp:template-part { "slug":"footer", "tagName":"footer"} /-->
+
+<script>
+  // console.log( document.querySelectorAll( 'main' ) );
+  // console.log( Array.from( document.querySelectorAll( '.main' ) ).length );
+  // if ( document.querySelectorAll('main > section') ) {
+  //   let sections = Array.from( document.querySelectorAll('main > section') );
+  //   let menu = document.createElement('nav');
+  //   for ( let i=0; i<sections.length; i++ ){
+  //     let href = sections[i].id = sections[i].classList[0];
+  //     let item = sections[i].classList[0];
+  //     let a = JSON.stringify({ "label":item, "url":'#' + item });
+  //     console.log( a );
+  //     // menu.innerHTML+= `<!-- wp:navigation-link {"label":"${ item }", "url":"${item}"} /-->`;
+  //     menu.innerHTML+= '<!-- wp:navigation-link ' + a + ' /-->';
+  //   }
+  //   document.querySelector('header').appendChild( menu );
+  //   console.log( menu );
+  // }
+</script>

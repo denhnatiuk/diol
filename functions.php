@@ -82,8 +82,17 @@ function snacks_assets()
   
   wp_enqueue_script( 'bootstrap.js', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.min.js', array( 'jquery' ), $bootstrap_version , true );
   
+  wp_enqueue_style( 'bootstrap.icons', get_template_directory_uri().'/node_modules/bootstrap-icons/font/bootstrap-icons.min.css', array(), $bootstrap_version );
+
+  wp_enqueue_style( 'fontawesome.icons', get_template_directory_uri().'/node_modules/font-awesome/css/font-awesome.min.css', array(), pb_get_package_version ( get_template_directory() . '/node_modules/font-awesome/package.json' ) );
 
   wp_enqueue_style( 'main', get_template_directory_uri() . '/styles/main.css', array(), esc_html(wp_get_theme()->get('Version' ) ) . "." . filemtime(get_template_directory().'/styles/main.css' ) );
+
+  wp_enqueue_script( 'mainjs', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery' ), esc_html(wp_get_theme()->get('Version' ) ) . "." . filemtime(get_template_directory().'/assets/js/main.js' )  , true );
+
+  wp_enqueue_script( 'scroll-to-top', get_template_directory_uri() . '/assets/js/scrolltotop.js', array( 'jquery' ), esc_html(wp_get_theme()->get('Version' ) ) . "." . filemtime(get_template_directory().'/assets/js/scrolltotop.js' )  , true );
+
+  wp_enqueue_script( 'switch-dark', get_template_directory_uri() . '/assets/js/switchdark.js', array( 'jquery' ), esc_html(wp_get_theme()->get('Version' ) ) . "." . filemtime(get_template_directory().'/assets/js/switchdark.js' )  , true );
 
   // wp_enqueue_style( 'slider', get_template_directory_uri() . '/css/slider.css', array(), '1.1', 'all' );
 
