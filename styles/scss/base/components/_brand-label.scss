@@ -5,9 +5,10 @@
     flex-flow: column wrap;
     align-items: flex-end;
     justify-content: center;
-    max-height: 3.125rem;
+    // max-height: 3.125rem;
+    max-height: 1rem;
     margin-right: 1rem;
-    margin-left: -6.25rem;
+    // margin-left: -6.25rem;
     .site-logo{
         position: relative;
         display: flex;
@@ -15,19 +16,19 @@
         flex-grow: 2;
         width:6.25rem;
         height:6.25rem;
-        margin-top:2rem;//layout fix
+        // margin-top:0.25rem;//layout fix
 
-        &:before{
-            content:"";
-            position: absolute;
-            z-index:-1;
-            top:0;
-            left:-2rem;
-            width:8.75rem;
-            height:6.25rem;
-            transform: skew(-25deg);
-            border-radius:5px;                    
-        }
+        // &:before{
+        //     content:"";
+        //     position: absolute;
+        //     z-index:-1;
+        //     top:0;
+        //     left:-2rem;
+        //     width:8.75rem;
+        //     height:6.25rem;
+        //     transform: skew(-25deg);
+        //     border-radius:5px;                    
+        // }
     }
     .brand-title, .site-title{
         flex-grow: 1;

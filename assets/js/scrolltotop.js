@@ -89,4 +89,4 @@ const ScrollToTop = (()=>{
 
 })();
 
-ScrollToTop.getInstance( '#sidebar' );
+ScrollToTop.getInstance( '.sidebar' );

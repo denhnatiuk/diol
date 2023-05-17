@@ -82,4 +82,4 @@ const SwitchDark = (()=>{
 
 })();
 
-SwitchDark.getInstance(  '#widgets'  );
+SwitchDark.getInstance(  '#modal-1-content' );
