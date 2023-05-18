@@ -5,9 +5,9 @@ import postcss from "rollup-plugin-postcss";
 
 export default [
   {
-    input: "styles/scss/main.scss",
+    input: "assets/css/scss/main.scss",
     output: {
-      file: "styles/main.css",
+      file: "assets/css/main.css",
       format: "es"
     },
     plugins: [

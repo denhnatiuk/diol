@@ -1,3 +1,4 @@
+/** use css color variables from _variables.scss */
 
 /** color transitions*/ 
 body {
@@ -8,8 +9,8 @@ body {
 }
 
 body{
-  background-color: var(--theme-color-background);
-  color: var(--theme-color-text);
+  color: var(--theme-color-inv-bg);
+  background-color: var(--theme-color-bg);
 
   .container-bg-filter{
     filter:  var(--filter-3);
@@ -25,6 +26,11 @@ body{
         filter: var(--filter-2);
         transition: all .5s ease-out;
     }
+  }
+
+  footer{
+    background-color: var(--theme-color-background);
+    color: var(--theme-color-text);
   }
 }
 

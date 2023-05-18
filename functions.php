@@ -86,7 +86,7 @@ function snacks_assets()
 
   wp_enqueue_style( 'fontawesome.icons', get_template_directory_uri().'/node_modules/font-awesome/css/font-awesome.min.css', array(), pb_get_package_version ( get_template_directory() . '/node_modules/font-awesome/package.json' ) );
 
-  wp_enqueue_style( 'main', get_template_directory_uri() . '/styles/main.css', array(), esc_html(wp_get_theme()->get('Version' ) ) . "." . filemtime(get_template_directory().'/styles/main.css' ) );
+  wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/css/main.css', array(), esc_html(wp_get_theme()->get('Version' ) ) . "." . filemtime(get_template_directory().'/assets/css/main.css' ) );
 
   wp_enqueue_script( 'mainjs', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery' ), esc_html(wp_get_theme()->get('Version' ) ) . "." . filemtime(get_template_directory().'/assets/js/main.js' )  , true );
 
