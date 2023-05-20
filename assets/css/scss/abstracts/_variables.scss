@@ -67,6 +67,30 @@ body{
   --theme-color-inv-bg: var(--coal);
   --theme-color-inv-bg-shade: var(--black);
 
+  transition: all .5s ease-out;
+
+  &.dark{  
+    --theme-color-inv-bg-glazed: var(--white);
+    --theme-color-inv-bg: var(--seasalt);
+    --theme-color-inv-bg-shade: var(--cadet-gray);
+  
+    --theme-color-inv-main-glazed: var(--light-green-cyan);
+    --theme-color-inv-main: var(--vivid-green-cyan);
+    --theme-color-inv-main-shade: var(--viridian);
+    
+    --theme-color-accent-glazed: var(--aqua);
+    --theme-color-accent: var(--pale-cyan-blue);
+    --theme-color-accent-shade: var(--vivid-cyan-blue);
+    
+    --theme-color-main-glazed: var(--slate-blue);
+    --theme-color-main: var(--hunter-green);
+    --theme-color-main-shade: var(--cinereous);
+  
+    --theme-color-bg-glazed: var(--liver);
+    --theme-color-bg: var(--coal);
+    --theme-color-bg-shade: var(--black);
+  }
+
   --filter-1: grayscale(35%) sepia(35%) brightness(15%) hue-rotate(22deg) contrast(100%);
   --filter-2:brightness(0.18) contrast(1.01) grayscale(0.15) hue-rotate(76deg) saturate(1.3) sepia(0.23) ;
   --filter-3: brightness(130%) blur(5px);
@@ -97,30 +121,6 @@ body{
         , radial-gradient(35% 56% at 91% 74%, #8A4FFFF5 9%, #073AFF00 100%)
         , radial-gradient(74% 86% at 67% 38%, #6DFFAEF5 24%, #073AFF00 100%)
         , linear-gradient(125deg, #4EB5FFFF 1%, #4C00FCFF 100%);
-
-  transition: all .5s ease-out;
-
-  &.dark{  
-    --theme-color-inv-bg-glazed: var(--white);
-    --theme-color-inv-bg: var(--seasalt);
-    --theme-color-inv-bg-shade: var(--cadet-gray);
-  
-    --theme-color-inv-main-glazed: var(--light-green-cyan);
-    --theme-color-inv-main: var(--vivid-green-cyan);
-    --theme-color-inv-main-shade: var(--viridian);
-    
-    --theme-color-accent-glazed: var(--aqua);
-    --theme-color-accent: var(--pale-cyan-blue);
-    --theme-color-accent-shade: var(--vivid-cyan-blue);
-    
-    --theme-color-main-glazed: var(--slate-blue);
-    --theme-color-main: var(--hunter-green);
-    --theme-color-main-shade: var(--cinereous);
-  
-    --theme-color-bg-glazed: var(--liver);
-    --theme-color-bg: var(--coal);
-    --theme-color-bg-shade: var(--black);
-  }
 }
 
 

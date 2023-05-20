@@ -1,4 +1,4 @@
-section#aboutus{
+section.aboutus{
 
     .section-header{
         text-align: right;
@@ -12,7 +12,7 @@ section#aboutus{
     }
 }
 
-section#aboutus{
+section.aboutus{
     justify-content: flex-start;
     align-items: flex-start;
     p{
@@ -76,7 +76,7 @@ section#aboutus{
     }
 }
 @media screen and (max-width:30rem) {
-    section#aboutus{
+    section.aboutus{
         justify-content: flex-start;
         align-items: flex-start;
         & [role="tablist"]{

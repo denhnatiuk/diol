@@ -1,46 +1,59 @@
 /** use css color variables from _variables.scss */
 
-/** color transitions*/ 
+/** theme color transitions*/ 
 body {
   transition: var(--transition);
   &.dark{
     transition: var(--transition);
   }
 }
-
+/** theme color schema*/ 
 body{
-  color: var(--theme-color-inv-bg);
   background-color: var(--theme-color-bg);
+  color: var(--theme-color-inv-bg);
 
-  .container-bg-filter{
-    filter:  var(--filter-3);
-    transition: all .5s ease-out;
+  header{
+
   }
 
-  &.dark{
-    .container-bg-filter{
-      filter:  var(--filter-1);
-      transition: all .5s ease-out;
-    }
-    :is(img, .cover-image, .container-bg-cover){
-        filter: var(--filter-2);
-        transition: all .5s ease-out;
-    }
+  main section{
+      background-color: var(--theme-color-bg);
+      color: var(--theme-color-inv-bg);
+
+      &:nth-of-type(2n+1){
+        background-color: var(--theme-color-inv-bg);
+        color: var(--theme-color-bg);
+      }
   }
 
   footer{
-    background-color: var(--theme-color-background);
-    color: var(--theme-color-text);
+    background-color: var(--theme-color-inv-bg);
+    color: var(--theme-color-bg);
   }
 }
 
-#features{
-  background-color: var(--theme-color-bg);
-  // height:100vh;
+
+.container-bg-filter{
+  filter:  var(--filter-3);
+  transition: all .5s ease-out;
 }
 
-header.site-header {
-  background: var(--theme-gradient-main2);
+body.dark{
+  .container-bg-filter{
+    filter:  var(--filter-1);
+    transition: all .5s ease-out;
+  }
+  :is(img, .cover-image, .container-bg-cover){
+      filter: var(--filter-2);
+      transition: all .5s ease-out;
+  }
+}
+
+
+
+.features{
+  background-color: var(--theme-color-bg);
+  // height:100vh;
 }
 
 a, button, .btn{
@@ -179,6 +192,6 @@ a, button, .btn{
   }
 }
 
-#product{
+.product{
   background: linear-gradient(var(--theme-color-inv-bg-glazed) 0%, var(--theme-color-inv-bg) 5%); 
 }
