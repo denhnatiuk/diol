@@ -79,6 +79,8 @@ const ScrollToTop = (()=>{
 
     getInstance: ( mountPoint, options ) => {
 
+      if ( !document.querySelector( mountPoint ) ) return;
+
       if ( !instance ) {
         instance = init( mountPoint, options );
       }

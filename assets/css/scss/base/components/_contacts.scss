@@ -1,6 +1,89 @@
-.contacts{
-    ul{
-        list-style-type:none;
-        padding:0;
+/**
+ * list-view
+ * table-view
+ * grid-view
+ * accordion-view
+ */ 
+ul {
+  list-style-type: none;
+  padding: 0;
+
+  li.contacts-item.accordion-view{
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.65, 0.05, 0.36, 1);
+
+    .accordion-label{
+      display:flex;
+      // background:var(--seasalt);
+      flex: 1 3rem;
+      
+      .icon{
+        position: relative;
+        display: block;
+        float: left;
+        width: 3rem;
+        height:3rem;
+        // margin-right:1rem;
+
+        & svg{
+          width:2rem;
+          height:2rem;
+          fill:red;
+          position: absolute;
+          top:25%;
+          left:25%;
+        }
+      }
     }
+
+    .accordion-item{
+      visibility: hidden;
+      color: transparent;
+      width:0;
+      flex-direction: column;
+      flex-grow: 1;
+      padding:1rem;
+      overflow: hidden;
+      // transform: translate(.5rem);
+      transition: all 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+
+        & .badge{
+          display: flex;
+
+          text-align:left;
+          border-radius:5px;
+          font-size:.5rem;
+          line-height:1rem;
+        }
+        & .value{
+          // display: block;
+          height:2rem;
+          font-size:1.75rem;
+          line-height: 1.75rem;
+        }
+
+    }
+    input[type="radio"]{
+      display:none;
+
+      &:checked + .accordion-item{
+        visibility: visible;
+        color: white;
+        width:auto;
+        flex-flow: column nowrap;
+        flex: 1 100%;
+        justify-self: start;
+        // transform: translate(0);
+        transition: all 0.6s cubic-bezier(0.65, 0.05, 0.36, 1);
+      }
+    }
+  }
+}
+button.accordion-label{
+  padding:0 1rem;
 }
