@@ -24,19 +24,21 @@ ul {
       
       .icon{
         position: relative;
-        display: block;
-        float: left;
+        // display: block;
+        // float: left;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
         width: 3rem;
         height:3rem;
+        border-radius: 50%;
         // margin-right:1rem;
 
         & svg{
           width:2rem;
           height:2rem;
-          fill:red;
-          position: absolute;
-          top:25%;
-          left:25%;
+          fill: var(--theme-color-accent-glazed);
         }
       }
     }
@@ -65,6 +67,12 @@ ul {
           height:2rem;
           font-size:1.75rem;
           line-height: 1.75rem;
+          &:after{
+            content:"";
+            display: block;
+            height:2px;
+            width:0;
+          }
         }
 
     }
@@ -73,13 +81,21 @@ ul {
 
       &:checked + .accordion-item{
         visibility: visible;
-        color: white;
+        color: var(--theme-color-text);
         width:auto;
         flex-flow: column nowrap;
         flex: 1 100%;
         justify-self: start;
         // transform: translate(0);
         transition: all 0.6s cubic-bezier(0.65, 0.05, 0.36, 1);
+
+        &:hover {
+          color: var(--theme-color-accent-glazed);
+
+          & .badge{
+            color: var(--theme-color-accent-glazed);
+          }
+        }
       }
     }
   }
@@ -87,3 +103,4 @@ ul {
 button.accordion-label{
   padding:0 1rem;
 }
+

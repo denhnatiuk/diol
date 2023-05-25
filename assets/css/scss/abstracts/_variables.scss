@@ -174,3 +174,42 @@ body{
 
 
 
+$tel-call-color: #72FF13; //electric green;
+$viber-brand-color:#7360F2;
+$skype-brand-color:#00aff0;
+$telegram-brand-color:#229ED9;
+$add-contact-color:#f00;
+$callback-color: #72FF13; 
+
+$icon-colors:(
+  "tel":$tel-call-color,
+  "skype":$skype-brand-color,
+  "viber":$viber-brand-color,
+  "telegram":$telegram-brand-color,
+  "addcontact":$add-contact-color,
+  "callback":$callback-color
+);
+
+@each $name, $color in $icon-colors {
+  ul li.contacts-item.accordion-view .accordion-label {
+    .icon__#{$name}:hover{
+      color: #{$color};
+      background: radial-gradient(transparent 0%,transparent 50%, #{$color} 100%);
+      box-shadow:1px 1px 5px #{$color};
+      transition: all 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+      svg {
+        fill: #{$color};
+        transition: all 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+      }
+    }
+  }
+  ul li.contacts-item.accordion-view input[type=radio]:checked+.accordion-item.#{$name}:hover {
+    color: #{$color};
+    transition: all 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+    & .value:after{
+      width: 100%;
+      background-color: #{$color};
+      transition: all 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+    }
+  }
+}
