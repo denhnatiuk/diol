@@ -16,19 +16,25 @@ body{
 
   }
 
-  main section{
+  main {
+    section{
       background-color: var(--theme-color-bg);
       color: var(--theme-color-inv-bg);
 
       &:nth-of-type(2n+1){
-        background-color: var(--theme-color-inv-bg);
+        background-color: var(--theme-color-inv-bg-glazed);
         color: var(--theme-color-bg);
       }
+
+      &.social{
+        background-color: var(--cinereous);
+      }
+    }
   }
 
   footer{
-    background-color: var(--theme-color-inv-bg);
-    color: var(--theme-color-bg);
+    background: repeating-linear-gradient(90deg, var(--cadet-gray) 0px,  var(--cadet-gray) 2px, var(--seasalt) 6px, var(--seasalt) 30px);
+    color: var(--theme-color-inv-bg);
   }
 }
 
@@ -36,6 +42,10 @@ body{
 .container-bg-filter{
   filter:  var(--filter-3);
   transition: all .5s ease-out;
+}
+
+.container-absolute svg{
+  fill: var(--theme-color-inv-bg-glazed)
 }
 
 body.dark{
@@ -196,6 +206,6 @@ a, button, .btn{
   background: linear-gradient(var(--theme-color-inv-bg-glazed) 0%, var(--theme-color-inv-bg) 5%); 
 }
 
-section.contacts{
+footer{
 
 }
